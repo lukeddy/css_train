@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+		<title>border-radius练习</title>
+		<style>
+           *{
+           	 border:0;
+           	 margin:0;
+           }
+           .wrapper{
+              width:690px;
+              margin:auto;
+              height: 220px;
+              border:1px solid tomato;
+           }
+           .item1,.item2,.item3,.item4{
+           	 float:left;
+           	 margin:10px;
+           }
+           .item1{
+           	  width:100px;
+           	  height:200px;
+              border:1px solid red;
+              background:red;
+              border-radius: 100px 0 0 100px;
+           }
+           .item2{
+           	  width:200px;
+           	  height:100px;
+           	  border:1px solid green;
+           	  background:green;
+           	  border-radius: 100px 100px 0 0;
+           }
+           .item3{
+            width:100px;
+           	height:200px;
+           	border:1px solid blue;
+           	background: blue;
+           	border-radius: 0 100px 100px 0;
+           }
+           .item4{
+           	width:200px;
+           	height:100px;
+           	border:1px solid purple;
+           	background:purple;
+           	border-radius: 0 0 100px 100px;
+           }
+
+           .wrapper-circle{
+              width:690px;
+              margin:auto;
+              min-height: 440px;
+              border:1px solid tomato;
+              position:relative;
+           }
+           .circle1,.circle2,.circle3,.circle4{
+	           	width:200px;
+	           	height:200px;
+	           	position:absolute;
+           }
+           .circle1{
+              /*border:1px solid red;*/
+              background:red;
+              border-radius: 200px 0 10px 0px;
+              top:0;
+              left:0;
+           }
+           .circle2{
+           	  /*border:1px solid green;*/
+           	  background:green;
+           	  border-radius: 0 200px 0 10px;
+           	  top:0;
+           	  left:200px;
+           }
+           .circle3{
+	           /*	border:1px solid blue;*/
+	           	background: blue;
+	           	border-radius: 10px 0 200px 0;
+	           	top:200px;
+	           	left:200px;
+           }
+           .circle4{
+	           	/*border:1px solid purple;*/
+	           	background:purple;
+	           	border-radius: 0 10px 0 200px;
+	           	top:200px;
+	           	left:0;
+           }
+		</style>
+	</head>
+    <body>
+    	<div class="wrapper">
+    		<div class="item1"></div>
+    		<div class="item2"></div>
+    		<div class="item3"></div>
+    		<div class="item4"></div>
+    	</div>
+    	<br>
+    	<br>
+    	<div class="wrapper-circle">
+    		<div class="circle1"></div>
+    		<div class="circle2"></div>
+    		<div class="circle3"></div>
+    		<div class="circle4"></div>
+    	</div>
+
+    </body>
+</html>
