@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+   	<title>Flexbox 设计指南示例</title>
+   	<style>
+   	    body{
+   	    	
+   	    }
+        .main{
+        	width: 960px;
+        	margin:auto;
+        }
+
+        .flex-example{
+          background:lightgreen;
+        }
+   	</style>
+   </head>
+   <body>
+       
+   	   <div class="main">
+         <h3>
+           <a href="http://zhuanlan.zhihu.com/FrontendMagazine/19955794" target="_blank">Flexbox 设计指南</a>
+         </h3>
+         <div class="flex-example">
+           <style>
+              .item-container{
+                display: flex;
+                /*direction: rtl;*/
+                background:hsl(34,88%,90%);
+                margin-bottom:20px;
+                
+              }
+              .square{
+                width:200px;
+                height:200px;
+                background-color:hsl(50,88%,50%);
+              }
+              .circle{
+                border-radius: 50%;
+                width:150px;
+                height:150px;
+                background-color:hsl(22,88%,50%);
+              }
+              .justify-flex-start{
+                justify-content:flex-start;
+              }
+              .justify-center{
+                justify-content:center;
+              }
+              .justify-flex-end{
+                justify-content:flex-end;
+              }
+              .justify-space-between{
+                justify-content:space-between;
+              }
+              .justify-space-around{
+                justify-content:space-around;
+              }
+           </style>
+           <div class="item-container justify-flex-start">
+              <div class="circle"></div>
+              <div class="square"> justify-content:flex-start;</div>
+              <div class="circle"></div>
+           </div>
+           <div class="item-container justify-center">
+              <div class="circle"></div>
+              <div class="square">justify-content:center;</div>
+              <div class="circle"></div>
+           </div>
+           <div class="item-container justify-flex-end">
+              <div class="circle"></div>
+              <div class="square"> justify-content:flex-end;</div>
+              <div class="circle"></div>
+           </div>
+           <div class="item-container justify-space-between">
+              <div class="circle"></div>
+              <div class="square"> justify-content:space-between;</div>
+              <div class="circle"></div>
+           </div>
+           <div class="item-container justify-space-around">
+              <div class="circle"></div>
+              <div class="square">justify-content:space-around;</div>
+              <div class="circle"></div>
+           </div>
+         </div>
+       </div>
+   </body>
+</html>
