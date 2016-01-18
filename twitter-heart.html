@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Twitter心型练习</title>
+</head>
+<body>
+	<h3>源自：<a href="http://zhuanlan.zhihu.com/FrontendMagazine/20486738" target="_blank">Twitter "like" 动画实战</a></h3>
+    <br>
+    <style>
+      .heart {
+		  cursor: pointer;
+		  height: 50px;
+		  width: 50px;
+		  background-image:url( 'web_heart_animation.png');
+		  background-position: left;
+		  background-repeat:no-repeat;
+		  background-size:2900%;
+		  display: inline-block;
+		  float:left;
+		}
+
+		.heart:hover {
+		  background-position:right;
+		}
+
+		.is_animating {
+		  animation: heart-burst .8s steps(28) 1;
+		}
+
+		@keyframes heart-burst {
+		  from {background-position:left;}
+		  to { background-position:right;}
+		}
+    </style>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</body>
+</html>
+<script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script>
+	/* when a user clicks, toggle the 'is-animating' class */
+	$(".heart").on('click touchstart', function(){
+	  $(this).toggleClass('is_animating');
+	});
+
+	/*when the animation is over, remove the class*/
+	$(".heart").on('animationend', function(){
+	  $(this).toggleClass('is_animating');
+	});
+</script>
