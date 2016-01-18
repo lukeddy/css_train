@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+   	<title>Flexbox测试</title>
+   	<style>
+   	    body{
+   	    	
+   	    }
+        .main{
+        	width: 960px;
+        	margin:auto;
+        	backgroune:#999;
+        }
+       .flex-container{
+        	width:300px;
+        	height:240px;
+        	background-color:silver;
+        	 display: -webkit-flex;
+        	display: flex;
+        	margin-bottom:10px;
+        }
+        .flex-item{
+        	background:tomato;
+        	width:100px;
+        	height:100px;
+        	margin:5px;
+        }
+   	</style>
+   </head>
+   <body>
+   	   <div class="main">
+   	   	 <h1>Flexbox练习,参考：<a href="http://www.w3cplus.com/blog/666.html" target="_blank">http://www.w3cplus.com/blog/666.html</a></h1>
+   	   	 <style>
+
+        .flex1{
+        	direction: ltr;//默认
+            -webkit-flex-direction:row;
+            flex-direction:row;
+        }
+        .flex2{
+        	direction: ltr;
+            -webkit-flex-direction:row-reverse;
+            flex-direction:row-reverse;
+        }
+        .flex3{
+        	direction: ltr;
+            -webkit-flex-direction:column;
+            flex-direction:column;
+        }
+
+
+        .flex4{
+        	direction: ltr;//默认
+            -webkit-flex-direction:column-reverse;
+            flex-direction:column-reverse;
+        }
+
+        .flex5{
+        	direction: rtl;//默认
+            -webkit-flex-direction:row;
+            flex-direction:row;
+        }
+        .flex6{
+        	direction: rtl;
+            -webkit-flex-direction:row-reverse;
+            flex-direction:row-reverse;
+        }
+        .flex7{
+        	direction: rtl;
+            -webkit-flex-direction:column;
+            flex-direction:column;
+        }
+
+
+        .flex8{
+        	direction: rtl;//默认
+            -webkit-flex-direction:column-reverse;
+            flex-direction:column-reverse;
+        }
+   	   	 </style>
+   	   	 <table>
+	   	   	 <caption> 
+	               <b>flex-direction 伸缩流的方向</b>
+	   	   	 </caption>
+   	   	 	<tr>
+   	   	 		<td>
+   	   	 			<div class="flex-container flex1">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+
+			   	   	 <div class="flex-container flex2">
+			   	   	 	<div class="flex-item">flex item3</div>
+			   	   	 	<div class="flex-item">flex item4</div>
+			   	   	 </div>
+
+			   	   	<div class="flex-container flex3">
+			   	   	 	<div class="flex-item">flex item5</div>
+			   	   	 	<div class="flex-item">flex item6</div>
+			   	   	 </div>
+
+			   	   	<div class="flex-container flex4">
+			   	   	 	<div class="flex-item">flex item7</div>
+			   	   	 	<div class="flex-item">flex item8</div>
+			   	   	 </div>
+			   	   </div>
+   	   	 		</td>
+   	   	 		<td>
+   	   	 			<div class="flex-container flex5">
+			   	   	 	<div class="flex-item ">flex item51</div>
+			   	   	 	<div class="flex-item ">flex item52</div>
+			   	   	 </div>
+
+			   	   	 <div class="flex-container flex6">
+			   	   	 	<div class="flex-item">flex item63</div>
+			   	   	 	<div class="flex-item">flex item64</div>
+			   	   	 </div>
+
+			   	   	<div class="flex-container flex7">
+			   	   	 	<div class="flex-item">flex item75</div>
+			   	   	 	<div class="flex-item">flex item76</div>
+			   	   	 </div>
+
+			   	   	<div class="flex-container flex8">
+			   	   	 	<div class="flex-item">flex item87</div>
+			   	   	 	<div class="flex-item">flex item88</div>
+			   	   	 </div>
+			   	   </div>
+
+   	   	 		</td>
+   	   	 	</tr>
+   	   	 </table>
+		<br>
+		<br>
+		<style>
+		  .justify-flex-start{
+           	  -webkit-justify-content:flex-start;
+           	  justify-content:flex-start;
+           }
+           .justify-flex-end{
+           	  -webkit-justify-content:flex-end;
+           	  justify-content:flex-end;
+           }
+           .justify-center{
+           	  -webkit-justify-content:center;
+           	  justify-content:center;
+           }
+           .justify-space-between{
+           	  -webkit-justify-content:space-between;
+           	  justify-content:space-between;
+           }
+           .justify-space-around{
+           	  -webkit-justify-content:space-around;
+           	  justify-content:space-around;
+           }
+           
+		</style>
+         <table>
+	   	   	 <caption> 
+	               <b>justify-content 主轴对齐</b>
+	   	   	 </caption>
+   	   	 	<tr>
+   	   	 		<td>
+   	   	 		   <div class="flex-container justify-flex-start">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container justify-flex-end">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container justify-center">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   	 <div class="flex-container justify-space-between">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   	 <div class="flex-container justify-space-around">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   </div>
+   	   	 		</td>
+   	   	 		
+   	   	 	</tr>
+   	   	 </table>
+   	   	 <style>
+   	   	 .alignbg{
+   	   	 	background:purple;
+   	   	 }
+           .align-flex-start{
+           	  -weikit-align-items:flex-start;
+           	  align-items:flex-start;
+           }
+           .align-flex-end{
+           	  -weikit-align-items:flex-end;
+           	  align-items:flex-end;
+           }
+           .align-center{
+           	  -weikit-align-items:center;
+           	  align-items:center;
+           }
+           
+           .align-baseline{
+           	  -weikit-align-items:baseline;
+           	  align-items:baseline;
+           }
+           .align-stretch{
+           	 -webkit-align-items:stretch;
+              align-items:stretch;
+           }
+   	   	 </style>
+   	   	 <table>
+	   	   	 <caption> 
+	               <b>align-items 侧轴对齐</b>
+	   	   	 </caption>
+   	   	 	<tr>
+   	   	 		<td>
+   	   	 		   <div class="flex-container alignbg align-flex-start">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container alignbg align-flex-end">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container alignbg align-center">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   	 <div class="flex-container alignbg align-baseline">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   	 <div class="flex-container alignbg align-stretch">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   </div>
+   	   	 		</td>
+   	   	 	</tr>
+   	   	 </table>
+   	   	 <style>
+   	   	 .wrapbg{
+   	   	 	background:lightblue;
+   	   	 }
+   	   	  .wrap-nowrap{
+   	   	  	-webkit-flex-wrap:nowrap;
+            flex-wrap:nowrap;
+   	   	  }
+   	   	  .wrap-wrap{
+   	   	  	-webkit-flex-wrap:wrap;
+   	   	  	flex-wrap:wrap;
+   	   	  }
+   	   	  .wrap-wrap-reverse{
+   	   	  	-webkit-flex-wrap:wrap-reverse;
+   	   	  	flex-wrap:wrap-reverse;
+   	   	  }
+   	   	  .margin-auto{
+   	   	  	margin:auto;
+   	   	  }
+   	   	 </style>
+   	   	 <table>
+	   	   	 <caption> 
+	               <b>flex-wrap 伸缩行换行</b>
+	   	   	 </caption>
+   	   	 	<tr>
+   	   	 		<td>
+   	   	 		   <div class="flex-container wrapbg wrap-nowrap">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container wrapbg wrap-wrap">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+   	   	 			<div class="flex-container wrapbg wrap-wrap-reverse">
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 	<div class="flex-item ">flex item1</div>
+			   	   	 	<div class="flex-item ">flex item2</div>
+			   	   	 </div>
+			   	   </div>
+			   	   <div class="flex-container">
+			   	   	  <div class="flex-item margin-auto">垂直剧中了flex-item1</div>
+			   	   </div>
+   	   	 		</td>
+   	   	 	</tr>
+   	   	 </table>
+         <style>
+               .flexnumbg{
+               	 background:lightgreen;
+               }
+               .two-fourth{
+               	 -webkit-flex:2;
+               	 flex:2;
+               }
+               .one-fourth{
+               	-webkit-flex:1;
+               	flex:1;
+               }
+         </style>
+   	   	 <div class="flex-container flexnumbg">
+   	   	 		<div class="flex-item two-fourth">flex item1</div>
+	   	   	 	<div class="flex-item one-fourth">flex item2</div>
+	   	   	 	<div class="flex-item one-fourth">flex item1</div>
+   	   	 </div>
+   	   	  <div class="flex-container flexnumbg">
+   	   	 		<div class="flex-item one-fourth">flex item1</div>
+	   	   	 	<div class="flex-item one-fourth">flex item2</div>
+	   	   	 	<div class="flex-item one-fourth">flex item1</div>
+	   	   	 	<div class="flex-item one-fourth">flex item1</div>
+	   	   	 	<div class="flex-item one-fourth">flex item1</div>
+   	   	 </div>
+
+   </body>
+</html>
